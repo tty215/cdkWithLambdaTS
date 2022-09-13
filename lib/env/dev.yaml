@@ -1,0 +1,10 @@
+DynamoDB:
+  removalPolicy: destroy
+  billingMode: PROVISIONED
+  readCapacity: 1
+  writeCapacity: 1
+  UserTableName: UserTable-dev
+Lambda:
+  memorySize: 128
+  timeout: 10
+  logRetention: 7

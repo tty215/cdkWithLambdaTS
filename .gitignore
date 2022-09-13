@@ -1,8 +1,19 @@
 *.js
 !jest.config.js
+!.eslintrc.js
+!.prettierrc.js
 *.d.ts
 node_modules
+
+.DS_Store
 
 # CDK asset staging directory
 .cdk.staging
 cdk.out
+
+# debug outputs
+debug/docker
+debug/dynamodb
+debug/template.yaml
+
+.vscode/launch.json

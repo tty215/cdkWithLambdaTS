@@ -1,0 +1,9 @@
+.eslintrc.js
+bin/*.js
+bin/*.d.ts
+lib/*.js
+lib/*.d.ts
+lib/*/*.js
+lib/*/*.d.ts
+test/*.js
+test/*.d.ts

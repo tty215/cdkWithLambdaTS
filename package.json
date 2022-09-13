@@ -2,27 +2,38 @@
   "name": "knowledge",
   "version": "0.1.0",
   "bin": {
-    "knowledge": "bin/knowledge.js"
+    "backend": "bin/stack.js"
   },
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "invoke:createUser": "sam local invoke UserCreate -t ./debug/template.yaml -e ./debug/events/user/create.json --docker-network cdk-sample --debug-port 5858",
+    "invoke:listUsers": "sam local invoke UserList -t ./debug/template.yaml --no-events --docker-network cdk-sample --debug-port 5858"
   },
   "devDependencies": {
+    "@types/aws-lambda": "^8.10.103",
     "@types/jest": "^27.5.2",
+    "@types/js-yaml": "^4.0.5",
     "@types/node": "10.17.27",
     "@types/prettier": "2.6.0",
+    "@types/uuid": "^8.3.4",
+    "aws-cdk": "2.41.0",
+    "esbuild": "^0.15.7",
     "jest": "^27.5.1",
     "ts-jest": "^27.1.4",
-    "aws-cdk": "2.41.0",
     "ts-node": "^10.9.1",
     "typescript": "~3.9.7"
   },
   "dependencies": {
     "aws-cdk-lib": "2.41.0",
+    "aws-lambda": "^1.0.7",
+    "aws-sdk": "^2.1212.0",
+    "aws-xray-sdk": "^3.3.7",
     "constructs": "^10.0.0",
-    "source-map-support": "^0.5.21"
+    "dayjs": "^1.11.5",
+    "dynamoose": "^2.8.8",
+    "source-map-support": "^0.5.21",
+    "uuid": "^9.0.0"
   }
 }
